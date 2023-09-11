@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>663</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="GaugeBase">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>320</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="GaugeBG">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: rgba(77, 77, 127, 120);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="GaugeMeter">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240, stop:0.799 rgba(255, 255, 255, 0), stop:0.8 rgb(0, 175, 255));
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240, stop:0.164 rgba(0, 0, 0, 0), stop:0.165 rgb(0, 175, 255))
+
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Interface">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>25</y>
+       <width>270</width>
+       <height>270</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius:135;
+background-color: rgb(0, 100, 255)
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="LabelCounter">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>180</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Current Count&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Counter">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>210</y>
+        <width>111</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: rgb(0, 120, 255)</string>
+      </property>
+      <property name="text">
+       <string>20.000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="GaugeName">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>100</y>
+        <width>311</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;GOOD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Border1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240.001, stop:0 rgba(255, 255, 255, 255), stop:0.001 rgba(255, 255, 255, 0))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Border2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:299.001, stop:0 rgba(255, 255, 255, 255), stop:0.001 rgba(255, 255, 255, 0))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <zorder>GaugeBG</zorder>
+    <zorder>GaugeMeter</zorder>
+    <zorder>Border1</zorder>
+    <zorder>Border2</zorder>
+    <zorder>Interface</zorder>
+   </widget>
+   <widget class="QFrame" name="GaugeBaseR">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>320</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="GaugeBGR">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: rgba(77, 77, 127, 120);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="GaugeMeterR">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240, stop:0.799 rgba(255, 255, 255, 0), stop:0.8 rgba(255, 50, 0, 255));
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240, stop:0.164 rgba(0, 0, 0, 0), stop:0.165 rgba(255, 50, 0, 255))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="InterfaceR">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>25</y>
+       <width>270</width>
+       <height>270</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius:135;
+background-color: rgb(175, 0, 0)
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="LabelCounterR">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>180</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Current Count&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CounterR">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>210</y>
+        <width>111</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: rgb(175, 0, 0)</string>
+      </property>
+      <property name="text">
+       <string>1.000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="GaugeNameR">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>100</y>
+        <width>311</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Mongolian Baiti</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+color: #FFFFFF</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;REJECT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Border1R">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240.001, stop:0 rgba(255, 255, 255, 255), stop:0.001 rgba(255, 255, 255, 0))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Border2R">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+border-radius: 150px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:299.001, stop:0 rgba(255, 255, 255, 255), stop:0.001 rgba(255, 255, 255, 0))
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <zorder>GaugeBGR</zorder>
+    <zorder>GaugeMeterR</zorder>
+    <zorder>Border1R</zorder>
+    <zorder>Border2R</zorder>
+    <zorder>InterfaceR</zorder>
+   </widget>
+   <widget class="QFrame" name="CounterBase">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>441</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>191</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: none;
+color: rgb(0, 0, 0)</string>
+     </property>
+     <property name="text">
+      <string>20.000</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TargetLabel">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>20</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: none;
+color: rgb(0, 0, 0)</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; color:#000000;&quot;&gt;Total&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TotalLabel">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+       <pointsize>6</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: none;
+color: rgb(0, 0, 0)</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#000000;&quot;&gt;Target: 20.000&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>350</y>
+      <width>171</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Mongolian Baiti</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
